@@ -8,7 +8,6 @@ object Day0102 extends App:
   val day: String =
     this.getClass.getSimpleName.init match
       case s"Day$name" => name
-      case obj => obj
 
   val input: List[String] =
     Source
