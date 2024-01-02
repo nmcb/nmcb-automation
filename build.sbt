@@ -2,7 +2,7 @@ lazy val root =
   project
     .in(file("."))
     .settings( scalaVersion := "3.3.1"
-             , name         := "aoc-2023"
+             , name         := "na-2024"
              , version      := "0.1.0"
              , libraryDependencies ++= Seq(
              ("org.scala-graph" %  "graph-core" % "2.0.1").cross(CrossVersion.for3Use2_13),
