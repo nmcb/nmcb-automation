@@ -1,4 +1,3 @@
-evolution=false
 openvpn=true
 mattermost=true
 redhat=true
