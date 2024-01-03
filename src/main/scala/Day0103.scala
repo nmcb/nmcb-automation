@@ -14,11 +14,15 @@ object Day0103 extends App:
       .fromResource(s"nmcb$day.txt")
       .getLines
       .map:
-        case s"$name" => Task(name)
+        case s"$name=$done" => Task(name, done.toBoolean)
       .toList
 
   case class Task(name: String, done: Boolean = false)
 
-  val start1: Long = System.currentTimeMillis
-  val tasksDone: Int = tasks.count(_.done)
+  val start1: Long =
+    System.currentTimeMillis
+
+  val tasksDone: Int =
+    tasks.count(_.done)
+
   println(s"Answer day $day part 1: ${tasksDone} [${System.currentTimeMillis - start1}ms]")

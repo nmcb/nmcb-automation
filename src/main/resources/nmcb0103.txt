@@ -1,4 +1,4 @@
-evolution
-openvpn
-mattermost
-redhat
+evolution=false
+openvpn=true
+mattermost=true
+redhat=true
