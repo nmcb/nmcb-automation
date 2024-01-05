@@ -1,3 +1,6 @@
+package na
+package nmcb
+
 import scala.io.*
 
 object Day0105 extends App:
@@ -10,17 +13,8 @@ object Day0105 extends App:
     Source
       .fromResource(s"nmcb$day.txt")
       .getLines
-      .map(s => {
-        println(s"1) $s"); s
-      })
       .filterNot(_.isBlank)
-      .map(s => {
-        println(s"2) $s"); s
-      })
       .filterNot(_.trim.startsWith("--"))
-      .map(s => {
-        println(s"3) $s"); s
-      })
       .map:
         case s"$name=$done" => Task(name, done.toBoolean)
       .toList

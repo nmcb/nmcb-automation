@@ -13,17 +13,8 @@ object Day0104 extends App:
     Source
       .fromResource(s"nmcb$day.txt")
       .getLines
-      .map(s => {
-        println(s"1) $s"); s
-      })
       .filterNot(_.isBlank)
-      .map(s => {
-        println(s"2) $s"); s
-      })
       .filterNot(_.trim.startsWith("--"))
-      .map(s => {
-        println(s"3) $s"); s
-      })
       .map:
         case s"$name=$done" => Task(name, done.toBoolean)
       .toList
