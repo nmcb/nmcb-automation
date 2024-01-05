@@ -3,7 +3,7 @@ package nmcb
 
 import scala.io.*
 
-object Day0104 extends App:
+object Day0105 extends App:
 
   val day: String =
     this.getClass.getSimpleName.init match
