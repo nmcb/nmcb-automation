@@ -17,3 +17,9 @@ class TestArchive extends AnyFunSuite:
   test("Day0105 - Scala Minio") {
     assertResult(Day0104.tasks.size)(actual = Day0105.tasksDone)
   }
+  test("Day0108 - Scrum Process") {
+    assertResult(Day0104.tasks.size)(actual = Day0108.tasksDone)
+  }
+  test("Day0109 - NA Introduction Day") {
+    assertResult(Day0104.tasks.size)(actual = Day0109.tasksDone)
+  }
