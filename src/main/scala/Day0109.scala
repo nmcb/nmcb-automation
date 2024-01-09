@@ -1,3 +1,6 @@
+package na
+package nmcb
+
 import scala.io.*
 
 object Day0109 extends App:
