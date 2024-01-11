@@ -1,0 +1,3 @@
+minio-manager-development=true
+coop-melvyn=true
+coop-anwyn=true
