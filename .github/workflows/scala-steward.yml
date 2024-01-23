@@ -18,6 +18,3 @@ jobs:
           github-app-key: ${{ secrets.SCALA_STEWARD_APP_PK }}
           author-name: nmcb
           author-email: nmcb@xs4all.nl
-          sign-commits: true
-          signing-key: 11CE225DB8EE6401
-          
