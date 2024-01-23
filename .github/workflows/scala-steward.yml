@@ -17,4 +17,4 @@ jobs:
           github-app-installation-id: ${{ secrets.SCALA_STEWARD_APP_II }}
           github-app-key: ${{ secrets.SCALA_STEWARD_APP_PK }}
           github-app-auth-only: 'true'
-          repos-file: 'repos.md'
+          repos-file: '.github/repos.md'
