@@ -15,6 +15,11 @@ jobs:
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           PASSPHRASE:      ${{ secrets.GPG_PASSPHRASE }}
@@ -27,3 +32,5 @@ jobs:
           github-app-key: ${{ secrets.SCALA_STEWARD_APP_PK }}
           sign-commits: true
           signing-key: ${{ secrets.GPG_SIGNING_KEY_ID }}
+          author-email: ${{ steps.import_gpg.outputs.email }}
+          author-name: ${{ steps.import_gpg.outputs.name }}
