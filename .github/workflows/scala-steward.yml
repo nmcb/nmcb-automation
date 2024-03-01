@@ -10,25 +10,9 @@ jobs:
     runs-on: ubuntu-22.04
     name: Launch Scala Steward
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          PASSPHRASE:      ${{ secrets.GPG_PASSPHRASE }}
-
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
         with:
           github-app-id: ${{ secrets.SCALA_STEWARD_APP_ID }}
           github-app-installation-id: ${{ secrets.SCALA_STEWARD_APP_II }}
           github-app-key: ${{ secrets.SCALA_STEWARD_APP_PK }}
-          sign-commits: true
-          signing-key: ${{ secrets.GPG_SIGNING_KEY_ID }}
