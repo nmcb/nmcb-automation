@@ -1,14 +1,12 @@
 lazy val root =
   project
     .in(file("."))
-    .settings( scalaVersion := "3.3.1"
+    .settings( scalaVersion := "3.3.0"
              , name         := "nmcb-automation"
              , version      := "0.1.0"
              , libraryDependencies ++= Seq(
-             ("org.scala-graph" %  "graph-core" % "2.0.1").cross(CrossVersion.for3Use2_13),
-             ("org.scala-graph" %  "graph-dot"  % "2.0.0").cross(CrossVersion.for3Use2_13),
-
-             "org.scalatest"    %% "scalatest"  % "3.2.16" % "test"))
+               "org.scalatest"    %% "scalatest"  % "3.2.18" % "test"
+             ))
 
 scalacOptions ++= Seq(       
   "-encoding", "utf8",        
