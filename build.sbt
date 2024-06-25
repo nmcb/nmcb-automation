@@ -5,7 +5,7 @@ lazy val root =
              , name         := "nmcb-automation"
              , version      := "0.1.0"
              , libraryDependencies ++= Seq(
-               "org.scalatest"    %% "scalatest"  % "3.2.18" % "test"
+               "org.scalatest"    %% "scalatest"  % "3.2.19" % "test"
              ))
 
 scalacOptions ++= Seq(       
