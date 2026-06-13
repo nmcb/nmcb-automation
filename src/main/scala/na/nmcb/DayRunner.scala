@@ -2,7 +2,6 @@ package na
 package nmcb
 
 import java.time.LocalDate
-import scala.io.*
 
 object DayRunner extends App:
 
@@ -11,12 +10,12 @@ object DayRunner extends App:
   case class Day(tasks: Task, date: LocalDate)
 
   val days: List[Day] =
-    ???
+    List.empty
 
-  val start1: Long =
+  lazy val start1: Long =
     System.currentTimeMillis
 
-  val tasksDone: Int =
-    ???
+  lazy val tasksDone: Int =
+    0
 
-//  println(s"Answer day $day part 1: ${tasksDone} [${System.currentTimeMillis - start1}ms]")
+//  println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")

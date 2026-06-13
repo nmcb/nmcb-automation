@@ -1,15 +1,18 @@
+package na
+package nmcb
+
 import scala.io.*
 
-object Day0110 extends App:
+object Day0105 extends App:
 
   val day: String =
     this.getClass.getSimpleName.init match
       case s"Day$name" => name
 
-  val tasks: List[Task] =
+  lazy val tasks: List[Task] =
     Source
       .fromResource(s"nmcb$day.txt")
-      .getLines
+      .getLines()
       .filterNot(_.isBlank)
       .filterNot(_.trim.startsWith("--"))
       .map:
@@ -18,10 +21,10 @@ object Day0110 extends App:
 
   case class Task(name: String, done: Boolean = false)
 
-  val start1: Long =
+  lazy val start1: Long =
     System.currentTimeMillis
 
-  val tasksDone: Int =
+  lazy val tasksDone: Int =
     tasks.count(_.done)
 
-  println(s"Answer day $day part 1: ${tasksDone} [${System.currentTimeMillis - start1}ms]")
+  println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")

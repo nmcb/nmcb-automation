@@ -1,6 +1,4 @@
-package na
-package nmcb
-package util
+package na.nmcb
 
 /** returns given string `s` left padded with given amount of `spaces` */
 def leftPad(s: String, spaces: Int): String =
