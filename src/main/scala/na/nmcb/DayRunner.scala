@@ -16,6 +16,6 @@ object DayRunner extends App:
     System.currentTimeMillis
 
   lazy val tasksDone: Int =
-    List.empty
+    0
 
 //  println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")
