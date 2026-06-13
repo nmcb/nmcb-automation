@@ -1,7 +1,6 @@
-package na
-package nmcb
-package test
+package nmcb.test
 
+import na.nmcb.*
 import org.scalatest.funsuite.AnyFunSuite
 
 class TestArchive extends AnyFunSuite:
