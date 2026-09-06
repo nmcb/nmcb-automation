@@ -2,7 +2,7 @@ package na.nmcb
 
 import scala.io.*
 
-object Day0110 extends App:
+object Day0110:
 
   val day: String =
     this.getClass.getSimpleName.init match
@@ -26,4 +26,5 @@ object Day0110 extends App:
   lazy val tasksDone: Int =
     tasks.count(_.done)
 
-  println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")
+  def main(args: Array[String]): Unit =
+    println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")

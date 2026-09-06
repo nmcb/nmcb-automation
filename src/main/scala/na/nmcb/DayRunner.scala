@@ -3,7 +3,7 @@ package nmcb
 
 import java.time.LocalDate
 
-object DayRunner extends App:
+object DayRunner:
 
   case class Task(name: String, done: Boolean = false)
 
@@ -17,5 +17,3 @@ object DayRunner extends App:
 
   lazy val tasksDone: Int =
     0
-
-//  println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")

@@ -3,7 +3,7 @@ package nmcb
 
 import scala.io.*
 
-object Day0103 extends App:
+object Day0103:
 
   val day: String =
     this.getClass.getSimpleName.init match
@@ -19,10 +19,8 @@ object Day0103 extends App:
 
   case class Task(name: String, done: Boolean = false)
 
-  lazy val start1: Long =
-    System.currentTimeMillis
+  lazy val start1: Long   = System.currentTimeMillis
+  lazy val tasksDone: Int = tasks.count(_.done)
 
-  lazy val tasksDone: Int =
-    tasks.count(_.done)
-
-  println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")
+  def main(args: Array[String]): Unit =
+    println(s"Answer day $day part 1: $tasksDone [${System.currentTimeMillis - start1}ms]")
