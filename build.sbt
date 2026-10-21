@@ -1,7 +1,7 @@
 lazy val root =
   project
     .in(file("."))
-    .settings( scalaVersion := "3.9.0"
+    .settings( scalaVersion := "3.10.0"
              , name         := "nmcb-automation"
              , version      := "0.1.0"
              , libraryDependencies ++= Seq(
